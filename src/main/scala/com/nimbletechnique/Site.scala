@@ -18,9 +18,10 @@ class Site extends ScalatraServlet with ScalateSupport {
     contentType = "text/html"
   }
 
-  get("/") {
-    render("/WEB-INF/index.scaml", "content" -> "hi there!")
-  }
+  get("/")        { render("/WEB-INF/index.scaml") }
+  get("/contact") { render("/WEB-INF/contact.scaml") }
+  get("/about")   { render("/WEB-INF/about.scaml") }
+  get("/work")    { render("/WEB-INF/work.scaml") }
 
   protected def contextPath = request.getContextPath
 
