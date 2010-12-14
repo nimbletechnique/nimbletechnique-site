@@ -1,6 +1,8 @@
 package com.nimbletechnique
 
+import org.scalatra._
 import org.scalatra.ScalatraServlet
+import scalate.ScalateSupport
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,14 +12,16 @@ import org.scalatra.ScalatraServlet
  * To change this template use File | Settings | File Templates.
  */
 
-class Site extends ScalatraServlet {
+class Site extends ScalatraServlet with ScalateSupport {
 
   before {
     contentType = "text/html"
   }
 
   get("/") {
-    <h1>Hello world!</h1>
+    templateEngine.layout("/WEB-INF/index.scaml", Map("content" -> "hi there!"))
   }
 
+  protected def contextPath = request.getContextPath
+  
 }
