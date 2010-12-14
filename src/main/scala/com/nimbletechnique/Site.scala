@@ -19,9 +19,12 @@ class Site extends ScalatraServlet with ScalateSupport {
   }
 
   get("/") {
-    templateEngine.layout("/WEB-INF/index.scaml", Map("content" -> "hi there!"))
+    render("/WEB-INF/index.scaml", "content" -> "hi there!")
   }
 
   protected def contextPath = request.getContextPath
-  
+
+  private def render(path: String, params:(String,String)*) = {
+    templateEngine.layout(path, params.toMap)
+  }
 }

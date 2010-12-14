@@ -1,0 +1,103 @@
+body {
+	background: #ddebef;
+}
+
+#header {
+	margin-top: 10px;
+}
+
+#navigation {
+	margin-top: 10px;
+}
+
+#hero {
+	margin-top: 5px;
+}
+
+#content {
+	margin-top: 10px;
+	background: white;
+	padding: 10px;
+}
+
+/* --- NAVIGATION -------------------------------------------------------------------------*/
+
+#navigation {
+	display: inline;
+	float: left;
+	height: 27px;
+	margin: 0; /*see IE6.css*/
+	padding: 0 0 15px 0;
+	width: 706px;
+}
+
+#navigation ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+}
+
+#navigation li {
+	background-color: #083e59;
+	border-right: 1px solid #1a4f68;
+	float: left;
+	font-size: 1.5em;
+	font-weight: bold;
+	height: 27px;
+	margin: 0;
+	padding: 10px 0 0 0;
+	text-align: center;
+	width: 24.85%; /*see IE6.css*/
+}
+
+#navigation li a {
+	color: white;
+	display: block;
+	height: 27px;
+	text-decoration: none;
+	width: 100%;
+	margin: -10px 0 0;
+	padding: 5px 0 0;
+	font-size: 1.0em;
+	font-weight: normal;
+}
+
+#navigation li a:hover { background: #094665; }	
+#navigation li a:active  { background: #051224; }
+#navigation li.on  { background: #051224; }
+#navigation li.on a:hover  { background: #051224; }
+
+
+#navigation li#first { background: #083e59 url(/images/gfx_navLeft.gif) top left no-repeat; }
+#navigation li#first a:hover  { background: #094665 url(/images/gfx_navLeft.gif) top left no-repeat; }
+#navigation li#first a:active  { background: #051224 url(/images/gfx_navLeft.gif) top left no-repeat; }
+#navigation li#first.on { background: #051224 url(/images/gfx_navLeft.gif) top left no-repeat; }
+#navigation li#first.on a:hover{ background: #051224 url(/images/gfx_navLeft.gif) top left no-repeat; }
+
+#navigation li#last { background: #083e59 url(/images/gfx_navRight.gif) top right no-repeat; border: none; }
+#navigation li#last a:hover { background: #094665 url(/images/gfx_navRight.gif) top right no-repeat; border: none; }
+#navigation li#last a:active { background: #051224 url(/images/gfx_navRight.gif) top right no-repeat; border: none; }
+#navigation li#last.on { background: #051224 url(/images/gfx_navRight.gif) top right no-repeat; border: none; }
+#navigation li#last.on a:hover { background: #051224 url(/images/gfx_navRight.gif) top right no-repeat; border: none; }
+
+
+/* --- CONTENT ----------------------------------------------------------------------------*/
+
+#content {
+	font-size: 1.3em;
+}
+
+h3 {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #ccc;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+#content a, #content a:visited {
+	color: #094665;
+	font-weight: bold;
+	text-decoration: none;
+}

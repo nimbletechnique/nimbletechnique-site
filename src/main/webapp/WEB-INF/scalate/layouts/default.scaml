@@ -3,7 +3,46 @@
 !!! 5
 %html
   %head
-    %title= title
+    %title= "Nimble Technique"
+    %link{ :href => "/stylesheets/blueprint/screen.css", :type => "text/css", :rel => "stylesheet", :media => "screen, projection" }
+    %link{ :href => "/stylesheets/blueprint/print.css", :type => "text/css", :rel => "stylesheet", :media => "print" }
+    /[if lt IE 8]
+      %link{ "href" => "/stylesheets/blueprint/ie.css", :type => "text/css", :rel => "stylesheet", :media => "screen, projection" }
+    %link{ :href => "/stylesheets/site.css", :type => "text/css", :rel => "stylesheet", :media => "screen, projection" }
   %body
-    %p
-      != body
+    .container
+      %div{ :class => "span-3"}
+        &#160;
+      %div{ :class => "span-18" }
+        #header{ :class => "span-18 last" }
+          %a{ :href => "/" }
+            %img{ :src => "/images/img_logo.gif"}
+        #navigation{ :class => "span-18 last" }
+          %ul
+            %li
+              %a{ :href => "/", :id => "first"} Home
+            %li
+              %a{ :href => "/about"} About
+            %li
+              %a{ :href => "/work"} Work
+            %li
+              %a{ :href => "/contact", :id => "last"} Contact
+
+        #hero{ :class => "span-18 last" }
+          %a{ :href => "/" }
+            %img{ :src => "/images/hero.png" }
+        %div{ :class => "span-18 last" }
+          #content
+            != body
+      %div{ :class => "span-3 last"}
+        / right blank column
+        &#160;
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-10595008-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
